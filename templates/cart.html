@@ -1,0 +1,261 @@
+{% load static %}
+<!-- myapp/templates/cart.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="{% static 'style1.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><img src="{% static 'LOGO1.jpg' %}" alt=""></a>
+        <ul class="navbar">
+            <li><a href="{% url 'home' %}">HOME</a></li>
+            <li><a href="{% url 'about' %}">ABOUT US</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">PRODUCTS<i class='bx bx-chevron-down'></i></button>
+                <div class="dropdown-content">
+                    <a href="{% url 'dress' %}">DRESS</a>
+                    <a href="{% url 'skirts' %}">SKIRTS</a>
+                    <a href="{% url 'pants' %}">PANTS</a>
+                </div>
+            </div>
+        </ul>
+        <form class="inlines">
+            <div class="searchbar">
+                <i class="bx bx-search"></i>
+                <input class="input-field" type="text">
+            </div>
+        </form>
+        <div class="nav-icon">
+            <a href="{% url 'fav' %}"><i class="bx bx-heart"></i> </a>
+            <a href="{% url 'cart' %}"><i class="bx bx-cart"></i> </a>
+            <a href="{% url 'account' %}"><i class="bx bx-user-circle"></i> </a>
+        </div>
+    </header>
+    <section class="main">
+        <div class="whole11">
+            <div class="container11">
+                <div class="cart4">
+                    <h1>My Cart</h1>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>PRODUCT</th>
+                            <th>QUANTITY</th>
+                            <th>PRICE</th>
+                            <th>TOTAL</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cart-info1">
+                                    <img src="{% static 'bdd-4.jpg' %}">
+                                    <div>
+                                        <p>Baby Doll Dress</p>
+                                        <small>Color-black</small>
+                                        <br>
+                                        <small>Size-M</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <input type="number" value="1">
+                            </td>
+                            <td>Rs 2600</td>
+                            <td>Rs 2600</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="all">
+                <div class="summar">
+                    <div class="top">
+                        <h2>Order Summary</h2>
+                    </div>
+                    <div class="detail">
+                        <h2 class="total">1 item</h2>
+                        <h2 class="total">2600</h2>
+                    </div>
+                    <div class="hello" style="margin-top: 20px;margin-bottom: 20px; padding: 0 30px;">
+                        <h2>Shipping</h2>
+                        <select id="shippping">
+                            <option value="fee">Standard Delivery - Rs 50</option>
+                            <option value="fee">Standard Delivery - Rs 50</option>
+                        </select>
+                        <h2>Promo Code</h2>
+                        <input type="text" placeholder="Enter your code" id="promoCode">
+                        <br>
+                        <button class="first-btn" id="promo" onclick="promo()">Apply</button></a>
+                    </div>
+                </div>
+                <hr>
+                <div class="detail">
+                    <h2 class="total">Total</h2>
+                    <h2 class="total">2600</h2>
+                </div>
+                <div style="padding: 0 10px; margin-bottom: 20px; ">
+                    <a href="{% url 'finalpayment' %}"><button class="checkout">Check out</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="foot">
+            <h4>CONNECT WITH US ON</h4>
+            <div class="s-icon">
+                <a href=""><i class='bx bxl-facebook-circle'></i></a>
+                <a href=""><i class='bx bxl-instagram'></i></a>
+                <a href=""><i class='bx bxl-twitter'></i></a>
+                <a href=""><i class='bx bxl-gmail'></i></a>
+            </div>
+            <p>Telephone-01-4200011, 01-4230001</p>
+        </div>
+    </section>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap');
+.inline {
+    margin: auto;
+}
+.small-img-row{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+/*---------cart items------*/
+.container11{
+    display:flex;
+    margin: 3rem 150 px;
+}
+.cart4{
+    width: 55rem;
+    background-color: #ffffff;
+    padding-left: 4rem;
+}
+.cart-page{
+    margin: 80px auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info1{
+    display: flex ;
+    flex-wrap: wrap;
+}
+th{
+    text-align: left;
+    padding:5px;
+    color:#344654;
+    background: #fff;
+    font-weight: normal;
+}
+ 
+td{
+    padding: 10px 5px;
+}
+td input{
+    width:40px;
+    height:30px;
+    padding:5px;
+}
+td a{
+    color:#344654;
+    font-size: 12px;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-price table{
+    border-top: 3px solid #344654;
+    width: 100%;
+    max-width: 350px;
+    height:50%
+}
+td :last-child{
+    text-align: right;
+}
+.table-head{
+    color:#ffffff;
+    background-color: #683B2B;
+}
+.head-img{
+    text-align: left;
+    padding-left: 7px;
+}
+.summary{
+    background-color: #ffffff;
+    width: 35%;
+    margin-left:20px;
+}
+.detail{
+    margin: 10px;
+    padding: 0 10px;
+    align-items: center;
+    background-color: #EFEAE6;
+    color:#ffffff;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    margin: 15px 0;
+    padding: 7px;
+}
+button{
+    border: none;
+    background-color: #683B2B;
+    padding: 8px 30px;
+    color:#ffffff;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.checkout{
+    width: 100%;
+    background-color: #344654;
+}
+button:hover, checkout:hover{
+    background-color: #000000;
+}
+.whole11{
+    display: flex;
+    padding:2rem;
+    width: 100%;
+}
+.all{
+    width: 25rem;
+    margin-left: 4rem;
+}
+.summar{
+    line-height: 2rem;
+}
+h2.total{
+    color: #683B2B;
+}
+.hello{
+    line-height: 2.5rem;
+}
+</style>
+</html>

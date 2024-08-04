@@ -1,0 +1,126 @@
+{% load static %}
+<!-- myapp/templates/about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="{% static 'style1.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://demo.plantpot.works/assets/css/normalize.css">
+    <link rel="stylesheet" href="https://use.typekit.net/opg3wle.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="{% static 'LOGO1.jpg' %}" alt=""></a>
+        <ul class="navbar">
+            <li><a href="{% url 'home' %}">HOME</a></li>
+            <li><a href="{% url 'about' %}">ABOUT US</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">PRODUCTS<i class='bx bx-chevron-down'></i></button>
+                <div class="dropdown-content">
+                  <a href="{% url 'dress' %}">DRESS</a>
+                  <a href="{% url 'skirts' %}">SKIRTS</a>
+                  <a href="{% url 'pants' %}">PANTS</a>
+                </div>
+              </div>
+        </ul>
+        <form class="inline">
+            <div class="searchbar">
+                <i class="bx bx-search"></i>
+                <input class="input-field" type="text">
+            </div>
+        </form>
+        <div class="nav-icon">
+            <a href="{% url 'fav' %}"><i class="bx bx-heart"></i> </a>
+            <a href="{% url 'cart' %}"><i class="bx bx-cart"></i> </a>
+            <a href="{% url 'account' %}"><i class="bx bx-user-circle"></i> </a>
+        </div>
+    </header>
+    <section class="p-intro">
+        <div class="intro1">
+            <div class="pic">
+                <div class="pics">
+                   <div class="sml-img"><img src="{% static 'bdd-1.jpg' %}" width="150" height="150"></div> 
+                   <div class="sml-img"><img src="{% static 'bdd-2.jpg' %}" width="150" height="150"></div> 
+                   <div class="sml-img"><img src="{% static 'bdd-3.jpg' %}" width="150" height="150"></div> 
+                </div>
+                <div class="main-pic">
+                    <img src="{% static 'bdd-4.jpg' %}" height="460">
+                </div>
+            </div>
+            <div class="explain">
+                <div class="intro2">
+                    <h2 class="clothdes">Baby Doll Dress</h2>
+                    <span class="distance">Rs. 2600</span>
+                </div>
+                <div class="para4">
+                    <p>Sweet short sleeve babydoll dress in a pure cotton construction. Empire waist silhouette is topped with short puff sleeves and tie closure at the notched bust. Finished with a ruffled mini-length hem and adjustable tie closure at the open back.</p>
+                </div>
+                <div class="color-choice">
+                    <h3 class="ccp">Available Colors</h3>
+
+                    <div class="radiob1">
+                        <div class="radiob"><input type="radio" id="black" name="color" value="black">
+                        <label for="black">Black</label><br></div>
+                        <div class="radiob"><input type="radio" id="white" name="color" value="white">
+                        <label for="white">White</label><br></div>
+                    </div>
+                </div>
+                <div class="size-choice">
+                    <h3 class="ccp">Sizes</h3>
+
+                    <div class="radiob1">
+                        <div class="radiob"><input type="radio" id="large" name="size" value="large">
+                        <label for="large">Large</label><br></div>
+                        <div class="radiob"><input type="radio" id="medium" name="size" value="medium">
+                        <label for="medium">Medium</label><br></div>
+                        <div class="radiob"><input type="radio" id="small" name="size" value="small">
+                        <label for="small">Small</label><br></div>
+                    </div>
+                </div>
+                <div class="decide">
+                    <div class='large-font text-center top-20'>
+                        <ion-icon name="heart">
+                          <div class='red-bg'></div>
+                        </ion-icon>
+                    </div>
+                    <div class="btn3">
+                       <button id="redirect" class="cart"><i class="bx bx-cart"></i>Add To Cart</button>
+                    </div>
+                    <div class="btn3">
+                        <a href="{% url 'login' %}"><button id="payment" class="cart">Purchase Now</button></a> 
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </section>
+    <section class="footer">
+        <div class="foot">
+            <h5>CONNECT WITH US ON</h5>
+            <div class="s-icon">
+            <a href=""><i class='bx bxl-facebook-circle'></i></a>
+            <a href=""><i class='bx bxl-instagram'></i></a>
+            <a href=""><i class='bx bxl-twitter'></i></a>
+            <a href=""><i class='bx bxl-gmail'></i></a>
+            </div>
+            <p>Telephone-01-4200011, 01-4230001</p>
+        </div>
+    </section>
+</body>
+</html>
+<script>
+    let icon = document.querySelector('ion-icon');
+icon.onclick = function(){
+  icon.classList.toggle('active');
+}
+const cart= document.querySelector(".cart");
+cart.addEventListener('click',()=>{
+    cart.style.backgroundColor = '#927567';
+    cart.style.color='black';
+})
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

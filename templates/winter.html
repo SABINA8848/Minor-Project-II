@@ -1,0 +1,114 @@
+{% load static %}
+<!-- myapp/templates/winter_discount.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winter Discount</title>
+    <link rel="stylesheet" href="{% static 'style1.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="{% static 'LOGO1.jpg' %}" alt=""></a>
+        <ul class="navbar">
+            <li><a href="{% url 'home' %}">HOME</a></li>
+            <li><a href="{% url 'about' %}">ABOUT US</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">PRODUCTS<i class='bx bx-chevron-down'></i></button>
+                <div class="dropdown-content">
+                  <a href="{% url 'dress' %}">DRESS</a>
+                  <a href="{% url 'skirts' %}">SKIRTS</a>
+                  <a href="{% url 'pants' %}">PANTS</a>
+                </div>
+              </div>
+        </ul>
+        <form class="inline">
+            <div class="searchbar">
+                <i class="bx bx-search"></i>
+                <input class="input-field" type="text">
+            </div>
+        </form>
+        <div class="nav-icon">
+            <a href="{% url 'fav' %}"><i class="bx bx-heart"></i> </a>
+            <a href="{% url 'cart' %}"><i class="bx bx-cart"></i> </a>
+            <a href="{% url 'account' %}"><i class="bx bx-user-circle"></i> </a>
+        </div>
+    </header>
+    <section class="collect">
+        <div class="heading2">
+            <div class="winter1"><h3>WINTER CLEARANCE</h3><br></div>
+            <div class="winter2"><p>
+                Get 50% off on all winter clothings
+            </p></div>
+        </div>
+        </div>
+        <div class="wrapper"></div>
+        <div class="whole">
+            <div class="cover3">
+                <div class="dressc1">
+                    <a href="Product.html"><img src="{% static 'winter1.jpg' %}" width="210" height="340" >
+                    <div class="name"><p>Knitted Sweater</p><br>
+                        <span class="sold-out">Rs.3000</span> Rs.1500
+                </div></a>
+                </div>
+                <div class="dressc1">
+                    <a href="Product.html"><img src="{% static 'winter2.jpg' %}" width="210" height="340" >
+                    <div class="name"><p>Reversible Coat</p><br>
+                            <span class="sold-out">Rs.4500</span> Rs.2250</div></a>
+                </div>
+                <div class="dressc1">
+                    <a href="Product.html"><img src="{% static 'winter3.jpg' %}" width="210" height="340" >
+                        <div class="name"><p>Short Fur Coat </p><br>
+                            <span class="sold-out">Rs.3500</span> Rs.1750</div></a>
+                </div>
+                <div class="dressc1">
+                    <a href="Product.html"><img src="{% static 'winter4.jpg' %}" width="210" height="340">
+                        <div class="name"><p>Reversible Coat</p><br>
+                            <span class="sold-out">Rs.4000</span> Rs.2000</div></a>
+                </div>
+             </div>
+        </div>
+        <div class="whole">
+            <div class="cover4">
+                <div class="dressc1">
+                    <a href="Product.html"><img src="{% static 'winter5.jpg' %}" width="210" height="340" >
+                    <div class="name"><p>Sweatshirt</p><br>
+                        <span class="sold-out">Rs.2200</span> Rs.1100
+                </div></a>
+                </div>
+                <div class="dressc1">
+                    <a href="Product.html"><img src="{% static 'winter6.jpg' %}" width="210" height="340" >
+                    <div class="name"><p>Oversized Hoddie</p><br>
+                            <span class="sold-out">Rs.2500</span> Rs.1250</div></a>
+                </div>
+                <div class="dressc1">
+                    <a href="Product.html"><img src="{% static 'winter7.jpg' %}" width="210" height="340" >
+                        <div class="name"><p>Zip-Up Knit </p><br>
+                            <span class="sold-out">Rs.2200</span> Rs.1100</div></a>
+                </div>
+                <div class="dressc1">
+                    <a href="Product.html"><img src="{% static 'winter8.jpg' %}" width="210" height="340">
+                        <div class="name"><p>Cardigon</p><br>
+                            <span class="sold-out">Rs.2600</span> Rs.1300</div></a>
+                </div>
+             </div>
+        </div>
+    </div>
+    </section>
+    <section class="footer">
+        <div class="foot">
+            <h4>CONNECT WITH US ON</h4>
+            <div class="s-icon">
+            <a href=""><i class='bx bxl-facebook-circle'></i></a>
+            <a href=""><i class='bx bxl-instagram'></i></a>
+            <a href=""><i class='bx bxl-twitter'></i></a>
+            <a href=""><i class='bx bxl-gmail'></i></a>
+            </div>
+            <p>Telephone-01-4200011, 01-4230001</p>
+        </div>
+    </section>
+</body>
+</html>

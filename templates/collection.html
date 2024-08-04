@@ -1,0 +1,115 @@
+{% load static %}
+<!-- myapp/templates/summer_collection.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Collection</title>
+    <link rel="stylesheet" href="{% static 'style1.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="{% static 'LOGO1.jpg' %}" alt=""></a>
+        <ul class="navbar">
+            <li><a href="{% url 'home' %}">HOME</a></li>
+            <li><a href="{% url 'about' %}">ABOUT US</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">PRODUCTS<i class='bx bx-chevron-down'></i></button>
+                <div class="dropdown-content">
+                  <a href="{% url 'dress' %}">DRESS</a>
+                  <a href="{% url 'skirts' %}">SKIRTS</a>
+                  <a href="{% url 'pants' %}">PANTS</a>
+                </div>
+              </div>
+        </ul>
+        <form class="inline">
+            <div class="searchbar">
+                <i class="bx bx-search"></i>
+                <input class="input-field" type="text">
+            </div>
+        </form>
+        <div class="nav-icon">
+            <a href="{% url 'fav' %}"><i class="bx bx-heart"></i> </a>
+            <a href="{% url 'cart' %}"><i class="bx bx-cart"></i> </a>
+            <a href="{% url 'account' %}"><i class="bx bx-user-circle"></i> </a>
+        </div>
+    </header>
+    <section class="collect">
+        <div class="heading1"><h3>2023 SUMMER COLLECTION</h3></div>
+        <nav class="stroke">
+            <ul>
+              <li><a href="{% url 'collection' %}">DRESSES & SKIRTS</a></li>
+              <li><a href="{% url 'collection_shirts' %}">SHIRTS</a></li>
+              <li><a href="{% url 'collection_pants' %}">PANTS</a></li>
+              <li><a href="#">SET</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="wrapper"></div>
+        <div class="whole">
+            <div class="cover3">
+                <div class="dressc1">
+                    <a href="{% url 'product' %}"><img src="{% static 'bdd-4.jpg' %}" width="210" height="340" >
+                    <div class="name"><p>Babydoll Dress</p><br>
+                    <p>Rs.2400</p></div></a>
+                </div>
+                <div class="dressc1">
+                    <a href="{% url 'product' %}"><img src="{% static 'dd2.jpg' %}" width="210" height="340" >
+                    <div class="name"><p>The Classic White</p><br>
+                        <p>Rs.2900</p></div></a>
+                </div>
+                <div class="dressc1">
+                    <a href="{% url 'product' %}"><img src="{% static 'dd3.jpg' %}" width="210" height="340" >
+                    <div class="name"><p>White Skirt</p><br>
+                        <p>Rs.1400</p></div></a>
+                </div>
+                <div class="dressc1">
+                    <a href="{% url 'product' %}"><img src="{% static 'dd4.jpg' %}" width="210" height="340">
+                    <div class="name"><p>The Formal</p><br>
+                        <p>Rs.1800</p></a>
+                </div>
+             </div>
+        </div>
+        <div class="whole">
+            <div class="cover4">
+                <div class="dressc1">
+                    <a href="{% url 'product' %}"><img src="{% static 'dd5.jpg' %}" width="210" height="340" >
+                    <div class="name"><p>Babydoll Dress</p><br>
+                    <p>Rs.2400</p></div></a>
+                </div>
+                <div class="dressc2">
+                    <a href="{% url 'product' %}"><img src="{% static 'dd6.jpg' %}" width="210" height="340" >
+                    <div class="name"><p>The Classic White</p><br>
+                        <p>Rs.2900</p></div></a>
+                </div>
+                <div class="dressc4">
+                    <a href="{% url 'product' %}"><img src="{% static 'dd7.jpg' %}" width="210" height="340" >
+                    <div class="name"><p>White Skirt</p><br>
+                        <p>Rs.1400</p></div></a>
+                </div>
+                <div class="dressc4">
+                    <a href="{% url 'product' %}"><img src="{% static 'dd8.jpg' %}" width="210" height="340">
+                    <div class="name"><p>The Formal</p><br>
+                        <p>Rs.1800</p></a>
+                </div>
+             </div>
+        </div>
+    </div>
+    </section>
+    <section class="footer">
+        <div class="foot">
+            <h4>CONNECT WITH US ON</h4>
+            <div class="s-icon">
+            <a href=""><i class='bx bxl-facebook-circle'></i></a>
+            <a href=""><i class='bx bxl-instagram'></i></a>
+            <a href=""><i class='bx bxl-twitter'></i></a>
+            <a href=""><i class='bx bxl-gmail'></i></a>
+            </div>
+            <p>Telephone-01-4200011, 01-4230001</p>
+        </div>
+    </section>
+</body>
+</html>

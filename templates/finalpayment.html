@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAYMENT</title>
+    <link rel="stylesheet" href="{% static 'style1.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="{% static 'LOGO1.jpg' %}" alt=""></a>
+        <ul class="navbar">
+            <li><a href="{% url 'home' %}">HOME</a></li>
+            <li><a href="{% url 'about' %}">ABOUT US</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">PRODUCTS<i class='bx bx-chevron-down'></i></button>
+                <div class="dropdown-content">
+                    <a href="{% url 'dress' %}">DRESS</a>
+                    <a href="{% url 'skirts' %}">SKIRTS</a>
+                    <a href="{% url 'pants' %}">PANTS</a>
+                </div>
+            </div>
+        </ul>
+        <form class="inline">
+            <div class="searchbar">
+                <i class="bx bx-search"></i>
+                <input class="input-field" type="text">
+            </div>
+        </form>
+        <div class="nav-icon">
+            <a href="{% url 'fav' %}"><i class="bx bx-heart"></i></a>
+            <a href="{% url 'cart' %}"><i class="bx bx-cart"></i></a>
+            <a href="{% url 'account' %}"><i class="bx bx-user-circle"></i></a>
+        </div>
+    </header>
+    <section class="collect">
+        <section class="aboutus">
+            <div class="form_title">
+                <p>Billing and Shipping</p>
+            </div>
+            <div class="wrapper1">
+                <div class="form_box">
+                    <form action="#">
+                        <div class="input_box">
+                            <div class="uname">
+                                <input type="text" placeholder="First Name" required>
+                                <input type="text" placeholder="Last Name" required>
+                            </div>
+                            <div class="mail">
+                                <input type="text" placeholder="Email" required>
+                                <input type="text" placeholder="Phone Number" required>
+                            </div>
+                            <div class="address">
+                                <input class="country_box" type="text" placeholder="Country/Region" required>
+                                <input class="address_box" type="text" placeholder="Address" required>
+                            </div>
+                            <input type="text" placeholder="Apartment, Suite, etc (optional)">
+                        </div>
+                        <div class="check">
+                            <input type="checkbox" id="remember_me">
+                            <label for="remember_me">Remember the information for the next time</label>
+                        </div>
+                    </form>
+                    <div class="pay">
+                        <div class="pay1"><h3>Your Order</h3></div>
+                        <table>
+                            <tr>
+                                <td class="table">Product</td>
+                                <td class="table1">Total</td>
+                            </tr>
+                            <tr>
+                                <td class="table">Baby Doll Dress</td>
+                                <td class="table1">2400</td>
+                            </tr>
+                            <tr>
+                                <td class="table">Shipping</td>
+                                <td class="table1">50</td>
+                            </tr>
+                            <tr>
+                                <td class="table">Grand Total</td>
+                                <td class="table1">2650</td>
+                            </tr>
+                        </table>
+                        <div class="payment">
+                            <a href="{% url 'account' %}"><button type="submit" class="login_btn">Continue</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="footer">
+        <div class="foot">
+            <h4>CONNECT WITH US ON</h4>
+            <div class="s-icon">
+                <a href=""><i class='bx bxl-facebook-circle'></i></a>
+                <a href=""><i class='bx bxl-instagram'></i></a>
+                <a href=""><i class='bx bxl-twitter'></i></a>
+                <a href=""><i class='bx bxl-gmail'></i></a>
+            </div>
+            <p>Telephone-01-4200011, 01-4230001</p>
+        </div>
+    </section>
+</body>
+</html>

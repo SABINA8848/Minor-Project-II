@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Success</title>
+    <link rel="stylesheet" href="{% static 'style1.css' %}">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="{% static 'LOGO1.jpg' %}" alt=""></a>
+        <ul class="navbar">
+            <li><a href="{% url 'home' %}">HOME</a></li>
+            <li><a href="{% url 'about' %}">ABOUT US</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">PRODUCTS<i class='bx bx-chevron-down'></i></button>
+                <div class="dropdown-content">
+                  <a href="{% url 'dress' %}">DRESS</a>
+                  <a href="{% url 'skirts' %}">SKIRTS</a>
+                  <a href="{% url 'pants' %}">PANTS</a>
+                </div>
+            </div>
+        </ul>
+    </header>
+    <section class="main">
+        <section class="aboutus">
+            <div class="form_title">
+                <p>Hi {{ username }}, you have successfully created your account.</p>
+            </div>
+        </section>
+    </section>
+    <section class="footer">
+        <div class="foot">
+            <h4>CONNECT WITH US ON</h4>
+            <div class="s-icon">
+                <a href=""><i class='bx bxl-facebook-circle'></i></a>
+                <a href=""><i class='bx bxl-instagram'></i></a>
+                <a href=""><i class='bx bxl-twitter'></i></a>
+                <a href=""><i class='bx bxl-gmail'></i></a>
+            </div>
+            <p>Telephone-01-4200011, 01-4230001</p>
+        </div>
+    </section>
+</body>
+</html>

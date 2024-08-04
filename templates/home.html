@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="{% static 'style1.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="{% static 'LOGO1.jpg' %}" alt=""></a>
+        <ul class="navbar">
+            <li><a href="{% url 'home' %}">HOME</a></li>
+            <li><a href="{% url 'about' %}">ABOUT US</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">PRODUCTS <i class='bx bx-chevron-down'></i></button>
+                <div class="dropdown-content">
+                  <a href="{% url 'dress' %}">DRESS</a>
+                  <a href="{% url 'skirts' %}">SKIRTS</a>
+                  <a href="{% url 'pants' %}">PANTS</a>
+                </div>
+              </div>
+        </ul>
+        <form class="inline">
+            <div class="searchbar">
+                <i class="bx bx-search"></i>
+                <input class="input-field" type="text">
+            </div>
+        </form>
+        <div class="nav-icon">
+            <a href="{% url 'fav' %}"><i class="bx bx-heart"></i> </a>
+            <a href="{% url 'cart' %}"><i class="bx bx-cart"></i> </a>
+            <a href="{% url 'account' %}"><i class="bx bx-user-circle"></i> </a>
+    </header>
+    <section class="main">
+        <div class="container">
+            <div class="collection-img"><img src="{% static 'collection img.jpg' %}" width="800" height="400"></div>
+            <div class="text">
+                <h1>GET READY FOR THIS 
+                    SUMMER 
+                    WITH OUR NEW 
+                </h1> 
+                <h2> FASHION COLLECTION</h2>
+                <div class="shop">
+                    <a href="{% url 'collection' %}" class="btn1"> Shop now<i class="bx bx-right-arrow-alt"></i> </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="trending">
+        <div class="text2">
+            <h2>TRENDING</h2>
+        </div>
+        <div class="clothes">
+            <div></div>
+            <div class="cover">
+                <div class="row">
+                    <div class="img-1"><a href="#"><img class="child" src="{% static 't-1.jpg' %}" width="250" height="250"></a></div> 
+                    <div class="img-1"><a href="#"><img class="child" src="{% static 't-2.jpg' %}" width="250" height="250"></a></div> 
+                    <div class="img-1"><a href="#"><img class="child" src="{% static 't-3.jpg' %}" width="250" height="250"></a></div> 
+                    <div class="img-1"><a href="#"><img class="child" src="{% static 't-4.jpg' %}" width="250" height="250"></a></div> 
+                    <div class="img-1"><a href="#"><img class="child" src="{% static 't-5.jpg' %}" width="250" height="250"></a></div> 
+                    <div class="img-1"><a href="#"><img class="child" src="{% static 't-6.jpg' %}" width="250" height="250"></a></div> 
+                    <div class="img-1"><a href="#"><img class="child" src="{% static 't-7.jpg' %}" width="250" height="250"></a></div> 
+                    <div class="img-1"><a href="#"><img class="child" src="{% static 't-8.jpg' %}" width="250" height="250"></a></div> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="New-Arrivals">
+        <div class="text2">
+            <h2>NEW ARRIVALS</h2>
+        </div>
+        <div class="clothes1">
+            <div class="whole1">
+                <div class="cover1">
+                    <div class="container1">
+                        <img src="{% static 'd-1.jpg' %}" alt="Snow" width="260" height="412">
+                        <a href="{% url 'dress' %}"><button class="btn">Dress</button></a>
+                    </div>
+                    <div class="container2">
+                        <img src="{% static 'd-2.jpg' %}" alt="Snow" width="260" height="412">
+                        <a href="{% url 'skirts' %}"><button class="btn">Skirt</button></a> 
+                    </div>
+                    <div class="container3">
+                        <img src="{% static 'd-3.jpg' %}" alt="Snow" width="260" height="412">
+                        <a href="{% url 'pants' %}"><button class="btn">Jeans</button></a>    
+                    </div>
+                    <div class="container4">
+                        <img src="{% static 'd-4.jpg' %}" alt="Snow" width="260" height="412">
+                        <button class="btn">Set</button>
+                    </div>
+                </div>
+                <div class="cover2">
+                    <div class="container1">
+                        <img src="{% static 'd-5.jpg' %}" alt="Snow" width="260" height="412">
+                        <button class="btn">Blazer</button>
+                    </div>
+                    <div class="container2">
+                        <img src="{% static 'd-6.jpg' %}" alt="Snow" width="260" height="412">
+                        <button class="btn">Formal</button>
+                    </div>
+                    <div class="container3">
+                        <img src="{% static 'd-7.jpg' %}" alt="Snow" width="260" height="412">
+                        <button class="btn">Casual</button>
+                    </div>
+                    <div class="container4">
+                        <img src="{% static 'd-8.jpg' %}" alt="Snow" width="260" height="412">
+                        <button class="btn">Pants</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="disocunt">
+        <div class="discount1">
+            <a href="winter.html"><img src="{% static 'discount.jpg' %}" width="100%" height="360"></a>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="foot">
+            <h4>CONNECT WITH US ON</h4>
+            <div class="s-icon">
+                <a href=""><i class='bx bxl-facebook-circle'></i></a>
+                <a href=""><i class='bx bxl-instagram'></i></a>
+                <a href=""><i class='bx bxl-twitter'></i></a>
+                <a href=""><i class='bx bxl-gmail'></i></a>
+            </div>
+            <p>Telephone-01-4200011, 01-4230001</p>
+        </div>
+    </section>
+</body>
+</html>
